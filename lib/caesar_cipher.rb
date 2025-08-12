@@ -5,20 +5,19 @@ end
 def caesar_cipher(message, shift)  
   output=""
   message.each_char do |char|
-    puts char
     if is_alpha?(char)
       val=char.ord
       if val>="a".ord
-        next_val=(val+shift)%"z".ord
+        next_val=((val+shift-"a".ord)%26)+"a".ord
+        puts next_val
       else
-        next_val=(val+shift)%"Z".ord
+        next_val=((val+shift-"A".ord)%26)+"A".ord
       end
-      output+=(next_val).chr      
+      output+=(next_val).chr     
     else
       output+=char
     end
   end  
-  puts output
   output
 end
 
