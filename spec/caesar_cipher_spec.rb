@@ -10,7 +10,7 @@ RSpec.describe "Caesar Cipher" do
     expect(caesar_cipher("abc", 1)).to eq("bcd")
   end
   
-  xit "easy test capitalized" do 
+  it "easy test capitalized" do 
     expect(caesar_cipher("ABC", 1)).to eq("BCD")
   end
 

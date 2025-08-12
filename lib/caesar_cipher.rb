@@ -10,11 +10,10 @@ def caesar_cipher(message, shift)
       val=char.ord
       if val>="a".ord
         next_val=(val+shift)%"z".ord
-        output+=(next_val).chr      
       else
-        output+=((val+shift)%65).chr
+        next_val=(val+shift)%"Z".ord
       end
-      # output+=val.chr
+      output+=(next_val).chr      
     else
       output+=char
     end
